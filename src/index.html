@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body>
+    <section class="flex justify-center align-middle m-8">
+        <div class="calculator flex flex-col justify-center rounded-lg bg-gray-200 p-8">
+            <form name="calculator" class="box-border">
+                <!--display-->
+                <input class="p-4 rounded-md w-full mb-4 focus:border-gray-400" type="text" id="display" name="display"/>
+                <br>
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '7'" type="button" value="7">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '8'" type="button" value="8">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '9'" type="button" value="9">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-purple-400 shadow-lg hover:shadow-xl" onclick="calculator.display.value += '÷'" type="button" value="÷">
+                <br>
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '4'" type="button" value="4">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '5'" type="button" value="5">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '6'" type="button" value="6">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-purple-400 shadow-lg hover:shadow-xl" onclick="calculator.display.value += '-'" type="button" value="-">
+                <br>
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '1'" type="button" value="1">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '2'" type="button" value="2">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '3'" type="button" value="3">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-purple-400 shadow-lg hover:shadow-xl" onclick="calculator.display.value += 'x'" type="button" value="x">
+                <br>
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += 'C'" type="button" value="C">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '0'" type="button" value="0">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value += '.'" type="button" value=".">
+                <input class="md:px-8 px-6 py-3 m-2 cursor-pointer rounded-full bg-purple-400 shadow-lg hover:shadow-xl" onclick="backspace()" type="button" value="&#8592">
+                <br>
+                <input class="md:px-8 px-6 py-3 m-2 w-full cursor-pointer rounded-full bg-white shadow-lg hover:shadow-xl" onclick="calculator.display.value = eval(calculator.display.value)" type="button" value="=">
+                
+            </form>
+        </div>
+    </section>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
